@@ -1,0 +1,7 @@
+FROM bellsoft/liberica-openjdk-alpine:11.0.2
+
+COPY build/libs/app.jar /app.jar
+COPY logback.groovy /logback.groovy
+
+
+CMD ["java", "-jar", "app.jar"]
